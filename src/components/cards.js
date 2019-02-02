@@ -7,17 +7,19 @@ class Cards extends Component {
   render() {
       return (
         <div className="row">
+
+
         {this.props.dvds.map((item) => {
           return (
           <div className="col-md-3" key={item.id}>
            <Card>
               <CardImg top width="100%"
               src={item.image}
-              alt={item.title}
+              alt={item.name}
               />
               <CardBody>
-                <CardTitle>{item.title}</CardTitle>
-                <CardText>{item.description}</CardText>
+                <CardTitle>{item.name}</CardTitle>
+                <CardText>{item.content}</CardText>
                 <Button color="success" >Ver</Button>
               </CardBody>
             </Card>
